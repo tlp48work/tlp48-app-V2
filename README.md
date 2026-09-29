@@ -1,14 +1,25 @@
-# TLP48 Fan App v2
-Static multi-page Vercel-ready prototype.
+# TLP48 Official Application v4
+Mobile-first Vercel-ready prototype inspired by the feature breadth of idol fan applications such as iAM48, but with original TLP48 branding/UI.
 
-Pages: Home, Members, Member Profile, Shop, Token, Redeem, Orders, Profile, Login, Admin.
+Main navigation:
+- MEMBERS (Generation 1–4)
+- SINGLE
+- MERCHANDISE
+- TULIPS COINS
 
-Demo user: fan@tlp48.com / 123456
+Prototype features:
+- Mobile bottom navigation
+- Member cards and member detail
+- Singles/discography
+- Merchandise shop
+- Buy merchandise with TULIPS COINS
+- Redeem codes
+- Profile
+- PWA manifest
 
-Admin is not included in the demo user by default. To enable an admin for testing, open browser console and run:
-const d=JSON.parse(localStorage.getItem('tlp48_db_v2')); d.users.push({id:99,name:'TLP48 Admin',email:'admin@tlp48.com',password:'admin123',role:'admin',token:99999}); localStorage.setItem('tlp48_db_v2',JSON.stringify(d));
+Demo redeem codes:
+TLP48-1000 = 1,000
+TULIP-500 = 500
+TLP48-WELCOME = 2,500
 
-IMPORTANT: This version stores data in browser localStorage. It is suitable for UI/prototype/testing only. For a real public shop, login, tokens, redeem codes, orders, image uploads and admin security should be moved to a server/database such as Supabase/Firebase with server-side authorization and payment/order handling.
-
-## Why the old version was blank
-The HTML pages referenced `app.js`, but that file was not included in the uploaded files. This package includes the missing `app.js` and a `single.html` entry point.
+This is a front-end prototype. For production, move authentication, coin balances, redeem codes, orders, inventory, uploads, and admin authorization to a real database/backend (e.g. Supabase) and enforce all coin/order operations server-side.

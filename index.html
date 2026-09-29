@@ -1,1 +1,30 @@
-<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TLP48</title><link rel="stylesheet" href="styles.css"></head><body><div id="app"></div><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#8fd8f5">
+<title>TLP48 Official Application</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div class="brand"><span class="tulip">🌷</span><div><b>TLP48</b><small>OFFICIAL APPLICATION</small></div></div>
+    <button class="icon-btn" onclick="showPage('profile')">♡</button>
+  </header>
+
+  <main id="page"></main>
+
+  <nav class="bottom-nav">
+    <button data-page="home" onclick="showPage('home')"><span>⌂</span><small>HOME</small></button>
+    <button data-page="members" onclick="showPage('members')"><span>♧</span><small>MEMBERS</small></button>
+    <button data-page="single" onclick="showPage('single')"><span>♫</span><small>SINGLE</small></button>
+    <button data-page="shop" onclick="showPage('shop')"><span>♡</span><small>SHOP</small></button>
+    <button data-page="coins" onclick="showPage('coins')"><span>✦</span><small>COINS</small></button>
+  </nav>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
