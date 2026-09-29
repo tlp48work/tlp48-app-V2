@@ -1,0 +1,2 @@
+import {createClient} from "../../lib/server";
+export default async function Single(){const s=await createClient();const {data}=await s.from("singles").select("*").order("release_date",{ascending:false});return <main className="shell"><header><b>♫ SINGLE</b><a href="/">HOME</a></header><div className="page">{(data||[]).map(x=><div className="card row" key={x.id}><div className="cover">💿</div><div><small>{x.number}</small><h2>{x.title}</h2><p className="muted">{x.release_date||"Coming Soon"}</p></div></div>)}</div></main>}

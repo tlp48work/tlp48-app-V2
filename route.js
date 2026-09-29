@@ -1,0 +1,2 @@
+import {createClient} from "../../../lib/server";import {NextResponse} from "next/server";
+export async function POST(req){const s=await createClient();const {data:{user}}=await s.auth.getUser();if(!user)return NextResponse.redirect(new URL("/login",req.url));const fd=await req.formData();const code=String(fd.get("code")||"").trim().toUpperCase();const {error}=await s.rpc("redeem_code",{p_code:code});if(error)return new NextResponse("Redeem failed",{status:400});return NextResponse.redirect(new URL("/coins",req.url))}
